@@ -5,23 +5,23 @@ using namespace std;
 class IS
 {
 	private:	int *a;
-				int size;
+			int size;
 	
 	public:		IS(int n)
-				{
-					size = n;
-					a = new int[size];
-					input();
-				}
+			{
+				size = n;
+				a = new int[size];
+				input();
+			}
+			
+			~IS()
+			{
+				delete a;
+			}
 				
-				~IS()
-				{
-					delete a;
-				}
-				
-				void input();
-				void display();
-				void insertionsort();
+			void input();
+			void display();
+			void insertionsort();
 };
 
 // input function
