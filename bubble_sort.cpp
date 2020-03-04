@@ -5,23 +5,23 @@ using namespace std;
 class BS
 {
 	private:	int *a;
-				int size;
+			int size;
 	
 	public:		BS(int n)
-				{
-					size = n;
-					a = new int[size];
-					input();
-				}
+			{
+				size = n;
+				a = new int[size];
+				input();
+			}
 				
-				~BS()
-				{
-					delete a;
-				}
-				
-				void input();
-				void display();
-				void bubblesort();
+			~BS()
+			{
+				delete a;
+			}
+			
+			void input();
+			void display();
+			void bubblesort();
 };
 
 // input function
