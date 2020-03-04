@@ -101,7 +101,8 @@ void MS :: merge(int a[], int lb, int mid, int ub)
 int main()
 {
 	int n;
-	cout<<"Enter the size of the ARRAY :";
+	cout<<"-----MERGE SORT (divide & conquer)----- \n";
+	cout<<"Enter the size of the ARRAY : ";
 	cin>>n;
 	MS a(n);
 	a.display();
