@@ -18,12 +18,18 @@ class MS
 				mergesort(a, lb, ub);
 			};
 		
+			~MS()
+			{
+				delete a;
+			}
+				
 			void input();
 			void mergesort(int a[], int lb, int ub);
 			void merge(int a[], int lb, int mid, int ub);
 			void display();
 };
 
+// input function
 void MS :: input()
 {
 	cout<<"Enter "<<size<<" elements : ";
@@ -35,6 +41,28 @@ void MS :: input()
 		cout<<a[i]<<" ";
 }
 
+// display function
+void MS :: display()
+{
+	int s, i;
+	if(size%2 == 0)
+	{
+		s = size;
+		i = 0;
+	}
+	else
+	{
+		s = size + 1;
+		i = 1;
+	}
+	cout<<"\n\n: SORTED ARRAY : \n";
+	for(int j=i;j<s;j++)
+		cout<<a[j]<<" ";
+	cout<<"\n";
+}
+
+
+// merge_sort (divide & conquer)
 void MS :: mergesort(int a[], int lb, int ub)
 {
 	if(lb<ub)
@@ -63,29 +91,13 @@ void MS :: merge(int a[], int lb, int mid, int ub)
 		sa[k++] = a[i++];
 	while(j<=ub)
 		sa[k++] = a[j++];
+	
 	for(int i=lb;i<=ub;i++)
 		a[i] = sa[i];
 }
 
-void MS :: display()
-{
-	int s, i;
-	if(size%2 == 0)
-	{
-		s = size;
-		i = 0;
-	}
-	else
-	{
-		s = size + 1;
-		i = 1;
-	}
-	cout<<"\n\n: SORTED ARRAY : \n";
-	for(int j=i;j<s;j++)
-		cout<<a[j]<<" ";
-	cout<<"\n";
-}
 
+// driver code
 int main()
 {
 	int n;
