@@ -5,23 +5,23 @@ using namespace std;
 class SS
 {
 	private:	int *a;
-				int size;
+			int size;
 	
 	public:		SS(int n)
-				{
-					size = n;
-					a = new int[size];
-					input();
-				}
-				
-				~SS()
-				{
-					delete a;
-				}
-				
-				void input();
-				void display();
-				void selectionsort();
+			{
+				size = n;
+				a = new int[size];
+				input();
+			}
+			
+			~SS()
+			{
+				delete a;
+			}
+			
+			void input();
+			void display();
+			void selectionsort();
 };
 
 // input function
